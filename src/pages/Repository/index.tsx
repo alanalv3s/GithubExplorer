@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch, Link } from 'react-router-dom';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
-import { promises } from 'fs';
 import api from '../../services/api';
 
 import { Header, RepositoryInfo, Issues } from './styles';
@@ -98,8 +97,8 @@ const Repository: React.FC = () => {
           <a
             key={issue.id}
             href={issue.html_url}
-            rel="noreferrer"
             target="_blank"
+            rel="noreferrer"
           >
             <div>
               <img
